@@ -1,5 +1,7 @@
 module "this" {
-  source  = "../terraform-client-tags"
+  source  = "shadbury/client-tags/aws"
+  version = "1.0.0"
+  
   enabled             = var.enabled
   namespace           = var.namespace
   tenant              = var.tenant
