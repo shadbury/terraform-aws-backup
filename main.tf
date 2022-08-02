@@ -12,7 +12,9 @@ locals {
 data "aws_partition" "current" {}
 
 module "label_backup_role" {
-  source     = "../terraform-client-tags"
+  source  = "shadbury/client-tags/aws"
+  version = "1.0.0"
+  
   enabled    = local.enabled
   attributes = ["backup"]
 
